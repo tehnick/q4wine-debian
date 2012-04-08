@@ -1,3 +1,25 @@
+q4wine (0.121-2ppa2~precise1) precise; urgency=low
+
+  * Bumped Standards-Version to 3.9.3.
+  * debian/control was updated:
+    - added string `DM-Upload-Allowed: yes'
+    - updated short and long descriptions of the package
+    - removed extra dependency from sqlite3
+      (libqt4-sql-sqlite depends on it)
+    - removed extra dependency from wine1.0
+      (there is no such package in actual Ubuntu releases)
+    - added optional dependencies from wine1.4 and wine1.5
+      (for Ubuntu users and others who use PPA in Launchpad)
+  * debian/dirs was deleted: it is not required.
+  * debian/copyright was updated:
+    file was rewritten in according to Copyright format 1.0
+  * debian/rules was updated:
+    - added additional section get-orig-source
+    - now dh is used instead of direct dh_* commands.
+      (fixes FTBFS with new build-arch handling) (Closes: #666371)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 09 Apr 2012 00:21:04 +0300
+
 q4wine (0.121-2ppa1~precise1) precise; urgency=low
 
   * Package on Launchpad was sync with package in Debian.
