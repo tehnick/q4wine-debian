@@ -7,8 +7,8 @@ Build-Depends: debhelper (>= 7.0.50~), cmake, autotools-dev, fakeroot,
  libfuse2 [!hurd-i386], libfuse-dev [!hurd-i386],
  icoutils (>=0.26.0), libkvm-dev [kfreebsd-i386 kfreebsd-amd64]
 Homepage: http://q4wine.brezblock.org.ua/
-Vcs-Git: git://github.com/brezerk/q4wine.git
-Vcs-Browser: https://github.com/brezerk/q4wine
+Vcs-Git: git://github.com/tehnick/q4wine-debian.git
+Vcs-Browser: https://github.com/tehnick/q4wine-debian
 Standards-Version: 3.9.3
 DM-Upload-Allowed: yes
 
