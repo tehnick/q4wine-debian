@@ -1,3 +1,9 @@
+q4wine (0.121-2ppa3~quantal1) quantal; urgency=low
+
+  * Some fixes in package.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Wed, 09 May 2012 00:36:07 +0300
+
 q4wine (0.121-2ppa2~precise1) precise; urgency=low
 
   * Bumped Standards-Version to 3.9.3.
