@@ -1,3 +1,10 @@
+q4wine (0.121-4) unstable; urgency=low
+
+  * debian/patches/fix-for-gcc-4.7 was added:
+    (fixes FTBFS with GCC >= 4.7) (Closes: #672073)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Wed, 09 May 2012 00:44:46 +0300
+
 q4wine (0.121-3) unstable; urgency=low
 
   * Bumped Standards-Version to 3.9.3.
