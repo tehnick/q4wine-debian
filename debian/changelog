@@ -1,3 +1,14 @@
+q4wine (0.999-rc7-0ppa1~quantal1) quantal; urgency=low
+
+  * Update to release candidate 0.999-rc7.
+  * debian/patches/* were deleted: now available in upstream.
+  * debian/copyright was updated: new files in source tree.
+  * debian/rules was updated:
+    - now uscan is used instead of direct using of wget and mv commands
+    - used hardening flags in compiler options
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 03 Jun 2012 23:54:39 +0300
+
 q4wine (0.121-2ppa3~quantal1) quantal; urgency=low
 
   * Some fixes in package.
