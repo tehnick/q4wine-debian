@@ -8,19 +8,26 @@ ifeq (,$(NUMJOBS))
 	NUMJOBS = 1
 endif
 
+CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS:=$(shell dpkg-buildflags --get CFLAGS) $(CPPFLAGS)
+CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(CPPFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
+
 PACKAGE = q4wine
 
 BUILDDIR = builddir
 DEB_DH_INSTALL_SOURCEDIR = $(CURDIR)/debian/$(PACKAGE)
 
-CUR_VER = $(shell uscan --dehs | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')
-
 CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release \
-            -USE_GZIP=ON \
-            -DCMAKE_INSTALL_PREFIX=/usr \
+            -DCMAKE_C_FLAGS="$(CFLAGS)" \
+            -DCMAKE_CXX_FLAGS="$(CXXFLAGS)" \
+            -DCMAKE_SHARED_LINKER_FLAGS="$(LDFLAGS)" \
+            -DCMAKE_MODULE_LINKER_FLAGS="$(LDFLAGS)" \
+            -DCMAKE_EXE_LINKER_FLAGS="$(LDFLAGS)" \
             -DLIBS_ENTRY_PATH=/usr/lib/q4wine/ \
+            -DCMAKE_INSTALL_PREFIX=/usr \
+            -USE_GZIP=ON \
             ..
-
 
 %:
 	dh $@ --parallel
@@ -48,7 +55,6 @@ override_dh_strip:
 	dh_strip
 
 get-orig-source:
-	wget -4 -c "http://sourceforge.net/projects/q4wine/files/q4wine/q4wine%20$(CUR_VER)/q4wine-$(CUR_VER).tar.bz2"
-	mv -f "$(PACKAGE)-$(CUR_VER).tar.bz2" ../"$(PACKAGE)_$(CUR_VER).orig.tar.bz2"
+	uscan --noconf --verbose --force-download --rename --download-current-version --destdir=..
 
 .PHONY: override_dh_makeshlibs
