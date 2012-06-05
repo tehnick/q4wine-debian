@@ -1,0 +1,71 @@
+Description: Fix build in Debian GNU/kFreeBSD and GNU/Hurd.
+ It is also should fix build in OpenBSD, NetBSD and etc.
+Author: Boris Pek <tehnick-8@mail.ru>
+Last-Update: 2012-06-05
+
+--- a/src/q4wine-cli/CMakeLists.txt
++++ b/src/q4wine-cli/CMakeLists.txt
+@@ -25,18 +25,11 @@
+ ADD_EXECUTABLE( q4wine-cli ${Q4WINE_CLI_SOURCES} ${Q4WINE_CLI_HEADERS} ${QM_I18N} ${Q4WINE_LIB_UI_HEADERS} ${Q4WINE_LIB_LIB_MOC_SOURCES} )
+ add_dependencies( q4wine-cli translations_build )
+ 
+-IF (${CMAKE_SYSTEM_NAME} MATCHES Linux)
+-    TARGET_LINK_LIBRARIES( q4wine-cli ${QT_LIBRARIES} q4wine-core)
+-ENDIF(${CMAKE_SYSTEM_NAME} MATCHES Linux)
+-
+ IF (${CMAKE_SYSTEM_NAME} MATCHES FreeBSD)
+     SET(BSD_LIBS -lkvm)
+-    TARGET_LINK_LIBRARIES( q4wine-cli ${QT_LIBRARIES} ${BSD_LIBS} q4wine-core)
+ ENDIF(${CMAKE_SYSTEM_NAME} MATCHES FreeBSD)
+ 
+-IF (${CMAKE_SYSTEM_NAME} MATCHES Darwin)
+-    TARGET_LINK_LIBRARIES( q4wine-cli ${QT_LIBRARIES} q4wine-core)
+-ENDIF(${CMAKE_SYSTEM_NAME} MATCHES Darwin)
++TARGET_LINK_LIBRARIES( q4wine-cli ${QT_LIBRARIES} q4wine-core ${BSD_LIBS})
+ 
+ IF( RELEASE )
+     install(TARGETS q4wine-cli DESTINATION ${APPS_ENTRY_PATH})
+--- a/src/q4wine-gui/CMakeLists.txt
++++ b/src/q4wine-gui/CMakeLists.txt
+@@ -184,18 +184,11 @@
+ ADD_EXECUTABLE( q4wine ${Q4WINE_GUI_SOURCES} ${Q4WINE_GUI_HEADERS} ${Q4WINE_GUI_UI_HEADERS} ${Q4WINE_GUI_MOC_SOURCES} ${RCC_SRCS} ${QM_I18N} ${PLUGINS_GUI_SOURCES} ${PLUGINS_GUI_HEADERS} ${PLUGINS_GUI_UI_HEADERS} ${PLUGINS_GUI_MOC_SOURCES})
+ add_dependencies( q4wine translations_build )
+ 
+-IF (${CMAKE_SYSTEM_NAME} MATCHES Linux)
+-    TARGET_LINK_LIBRARIES( q4wine  ${QT_LIBRARIES} q4wine-core ${QTSINGLEAPPLIB})
+-ENDIF(${CMAKE_SYSTEM_NAME} MATCHES Linux)
+-
+ IF (${CMAKE_SYSTEM_NAME} MATCHES FreeBSD)
+     SET(BSD_LIBS -lkvm)
+-    TARGET_LINK_LIBRARIES( q4wine ${QT_LIBRARIES} ${BSD_LIBS} q4wine-core ${QTSINGLEAPPLIB})
+ ENDIF(${CMAKE_SYSTEM_NAME} MATCHES FreeBSD)
+ 
+-IF (${CMAKE_SYSTEM_NAME} MATCHES Darwin)
+-    TARGET_LINK_LIBRARIES( q4wine ${QT_LIBRARIES} q4wine-core ${QTSINGLEAPPLIB})
+-ENDIF(${CMAKE_SYSTEM_NAME} MATCHES Darwin)
++TARGET_LINK_LIBRARIES( q4wine ${QT_LIBRARIES} q4wine-core ${BSD_LIBS} ${QTSINGLEAPPLIB})
+ 
+ IF( RELEASE )
+     #install(TARGETS q4wine RUNTIME DESTINATION ${APPS_ENTRY_PATH} BUNDLE DESTINATION ${CMAKE_INSTALL_PREFIX})
+--- a/src/q4wine-helper/CMakeLists.txt
++++ b/src/q4wine-helper/CMakeLists.txt
+@@ -47,18 +47,11 @@
+ 
+ add_dependencies( q4wine-helper translations_build )
+ 
+-IF (${CMAKE_SYSTEM_NAME} MATCHES Linux)
+-    TARGET_LINK_LIBRARIES( q4wine-helper ${QT_LIBRARIES} q4wine-core)
+-ENDIF(${CMAKE_SYSTEM_NAME} MATCHES Linux)
+-
+ IF (${CMAKE_SYSTEM_NAME} MATCHES FreeBSD)
+     SET(BSD_LIBS -lkvm)
+-    TARGET_LINK_LIBRARIES( q4wine-helper ${QT_LIBRARIES} ${BSD_LIBS} q4wine-core)
+ ENDIF(${CMAKE_SYSTEM_NAME} MATCHES FreeBSD)
+ 
+-IF (${CMAKE_SYSTEM_NAME} MATCHES Darwin)
+-    TARGET_LINK_LIBRARIES( q4wine-helper ${QT_LIBRARIES} q4wine-core)
+-ENDIF(${CMAKE_SYSTEM_NAME} MATCHES Darwin)
++TARGET_LINK_LIBRARIES( q4wine-helper ${QT_LIBRARIES} q4wine-core ${BSD_LIBS})
+ 
+ IF( RELEASE )
+     install(TARGETS q4wine-helper DESTINATION ${APPS_ENTRY_PATH})
