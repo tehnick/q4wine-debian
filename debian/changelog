@@ -1,3 +1,10 @@
+q4wine (0.999-rc7-3) experimental; urgency=low
+
+  * Added file debian/patches/fixes-for-hurd-i386:
+    fixes FTBFS in Debian GNU/Hurd.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Wed, 06 Jun 2012 21:55:24 +0300
+
 q4wine (0.999-rc7-2) experimental; urgency=low
 
   * Added patch debian/patches/fix-build-on-kfreebsd-and-hurd-i386:
