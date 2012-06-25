@@ -5,7 +5,7 @@ Maintainer: Boris Pek <tehnick-8@mail.ru>
 Build-Depends: debhelper (>= 7.0.50~), cmake, autotools-dev, fakeroot,
  libqt4-dev (>=4.4.0), qt4-dev-tools (>=4.4.0), qt4-qtconfig (>=4.4.0),
  libfuse2 [!hurd-i386], libfuse-dev [!hurd-i386],
- icoutils (>=0.26.0), libkvm-dev [kfreebsd-i386 kfreebsd-amd64]
+ icoutils (>=0.26.0), libkvm-dev [kfreebsd-any]
 Homepage: http://q4wine.brezblock.org.ua/
 Vcs-Git: git://github.com/tehnick/q4wine-debian.git
 Vcs-Browser: https://github.com/tehnick/q4wine-debian
