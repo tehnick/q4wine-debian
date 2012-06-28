@@ -1,3 +1,14 @@
+q4wine (0.999-rc8-1) experimental; urgency=low
+
+  * Update to stable release 0.999-rc8.
+  * Deleted debian/patches/*: accepted in upstream.
+  * Updated debian/watch: changed regexp.
+  * Updated debian/control: used [kfreebsd-any] instead of hardcoded list of
+    kFreeBSD architectures [kfreebsd-i386 kfreebsd-amd64] in build dependency
+    from libkvm-dev.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Thu, 28 Jun 2012 21:36:21 +0300
+
 q4wine (0.999-rc7-3) experimental; urgency=low
 
   * Added file debian/patches/fixes-for-hurd-i386:
