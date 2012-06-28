@@ -1,6 +1,6 @@
 q4wine (0.999-rc8-1) experimental; urgency=low
 
-  * Update to stable release 0.999-rc8.
+  * Update to release candidate 0.999-rc8.
   * Deleted debian/patches/*: accepted in upstream.
   * Updated debian/watch: changed regexp.
   * Updated debian/control: used [kfreebsd-any] instead of hardcoded list of
