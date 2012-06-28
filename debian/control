@@ -15,10 +15,12 @@ DM-Upload-Allowed: yes
 Package: q4wine
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
- wine-bin [amd64 i386] | wine-bin-unstable [amd64 i386] | wine [amd64 i386] |
- wine1.2 [amd64 i386] | wine1.3 [amd64 i386] | wine1.4 [amd64 i386] |
- wine1.5 [amd64 i386],
  libqt4-sql-sqlite, icoutils (>=0.26.0), wget, sudo
+Recommends: wine-bin [any-i386 any-powerpc any-sparc] |
+ wine-bin-unstable [any-i386 any-powerpc any-sparc] |
+ wine64-bin [any-amd64] | wine64-bin-unstable [any-amd64] |
+ wine [amd64 i386] | wine1.2 [amd64 i386] | wine1.3 [amd64 i386] |
+ wine1.4 [amd64 i386] | wine1.5 [amd64 i386]
 Suggests: fuseiso [!hurd-i386 !kfreebsd-i386 !kfreebsd-amd64]
 Replaces: q4wine-unstable
 Conflicts: q4wine-unstable
