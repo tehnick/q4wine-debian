@@ -1,3 +1,12 @@
+q4wine (0.999-rc8-2) experimental; urgency=low
+
+  * Dependencies from wine* were moved from Depends to Recommends section.
+    It should simplify migration to Multiarch packages. Also wine can be
+    manually compiled and installed in user's system and not listed in the
+    list of installed packages in this case. (Closes: #679466)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Fri, 29 Jun 2012 02:48:56 +0300
+
 q4wine (0.999-rc8-1) experimental; urgency=low
 
   * Update to release candidate 0.999-rc8.
