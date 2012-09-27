@@ -1,60 +1,25 @@
 #!/usr/bin/make -f
 
-ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-endif
-
-ifeq (,$(NUMJOBS))
-	NUMJOBS = 1
-endif
-
 CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
-CFLAGS:=$(shell dpkg-buildflags --get CFLAGS) $(CPPFLAGS)
 CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(CPPFLAGS)
 LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
-
-PACKAGE = q4wine
-
-BUILDDIR = builddir
-DEB_DH_INSTALL_SOURCEDIR = $(CURDIR)/debian/$(PACKAGE)
+export CPPFLAGS CXXFLAGS LDFLAGS
 
 CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release \
-            -DCMAKE_C_FLAGS="$(CFLAGS)" \
-            -DCMAKE_CXX_FLAGS="$(CXXFLAGS)" \
-            -DCMAKE_SHARED_LINKER_FLAGS="$(LDFLAGS)" \
-            -DCMAKE_MODULE_LINKER_FLAGS="$(LDFLAGS)" \
-            -DCMAKE_EXE_LINKER_FLAGS="$(LDFLAGS)" \
             -DLIBS_ENTRY_PATH=/usr/lib/q4wine/ \
             -DCMAKE_INSTALL_PREFIX=/usr \
-            -USE_GZIP=ON \
-            ..
+            -USE_GZIP=ON
 
 %:
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	mkdir -p $(BUILDDIR) && cd $(BUILDDIR) && cmake $(CMAKEOPTS)
-
-override_dh_auto_build:
-	cd $(BUILDDIR) && $(MAKE) -j$(NUMJOBS)
-
-override_dh_auto_clean:
-	dh_testroot
-	[ ! -f Makefile ] || ( cd $(BUILDDIR) && $(MAKE) clean )
-	[ ! -d $(BUILDDIR) ] || rm -r $(BUILDDIR)
-	rm -f build-stamp configure-stamp config.sub config.guess
-
-override_dh_auto_install:
-	cd $(BUILDDIR) && $(MAKE) install DESTDIR=$(DEB_DH_INSTALL_SOURCEDIR)
+	dh_auto_configure -- $(CMAKEOPTS)
 
 override_dh_installchangelogs:
 	dh_installchangelogs ChangeLog
 
-.PHONY: override_dh_strip
-override_dh_strip:
-	dh_strip
-
 get-orig-source:
-	uscan --noconf --verbose --force-download --rename --download-current-version --destdir=..
+	uscan --noconf --verbose --force-download --rename --download-current-version
 
 .PHONY: override_dh_makeshlibs
