@@ -1,6 +1,13 @@
+q4wine (1.0-r3-2) unstable; urgency=low
+
+  * Move package to unstable: no changes required.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 12 May 2013 16:20:23 +0300
+
 q4wine (1.0-r3-1) experimental; urgency=low
 
   * Update to stable release 1.0-r3.
+  * Update debian/copyright.
 
  -- Boris Pek <tehnick-8@mail.ru>  Sat, 04 May 2013 00:58:16 +0300
 
