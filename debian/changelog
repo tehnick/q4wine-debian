@@ -1,8 +1,11 @@
-q4wine (1.0-r3-2~bpo70+1) wheezy-backports; urgency=low
+q4wine (1.1-1) unstable; urgency=low
 
-  * Rebuild for wheezy-backports.
+  * Update to stable release 1.1.
+  * Bump Standards-Version to 3.9.4 (was 3.9.3): no changes required.
+  * Delete obsolete DM-Upload-Allowed field from debian/control.
+  * Update get-orig-source section in debian/rules.
 
- -- Boris Pek <tehnick-8@mail.ru>  Mon, 27 May 2013 21:06:33 +0300
+ -- Boris Pek <tehnick@debian.org>  Thu, 14 Nov 2013 23:12:34 +0200
 
 q4wine (1.0-r3-2) unstable; urgency=low
 
