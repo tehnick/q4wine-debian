@@ -1,49 +1,82 @@
-q4wine (1.1-0ppa1~trusty1) trusty; urgency=low
+q4wine (1.1-1) unstable; urgency=low
 
   * Update to stable release 1.1.
+  * Bump Standards-Version to 3.9.4 (was 3.9.3): no changes required.
+  * Delete obsolete DM-Upload-Allowed field from debian/control.
+  * Update get-orig-source section in debian/rules.
 
- -- Boris Pek <tehnick@debian.org>  Thu, 14 Nov 2013 23:03:54 +0200
+ -- Boris Pek <tehnick@debian.org>  Thu, 14 Nov 2013 23:12:34 +0200
 
-q4wine (1.0-r3-0ppa1~raring1) raring; urgency=low
+q4wine (1.0-r3-2) unstable; urgency=low
+
+  * Move package to unstable: no changes required.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 12 May 2013 16:20:23 +0300
+
+q4wine (1.0-r3-1) experimental; urgency=low
 
   * Update to stable release 1.0-r3.
+  * Update debian/copyright.
 
- -- Boris Pek <tehnick-8@mail.ru>  Sat, 04 May 2013 00:38:51 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Sat, 04 May 2013 00:58:16 +0300
 
-q4wine (1.0-r2-0ppa1~raring1) raring; urgency=low
+q4wine (1.0-r2-1) experimental; urgency=low
 
   * Update to stable release 1.0-r2.
 
- -- Boris Pek <tehnick-8@mail.ru>  Sun, 03 Mar 2013 21:15:01 +0200
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 04 Mar 2013 00:13:07 +0200
 
-q4wine (1.0-r1-0ppa1~raring1) raring; urgency=low
+q4wine (1.0-r1-1) experimental; urgency=low
 
   * Update to stable release 1.0-r1.
 
- -- Boris Pek <tehnick-8@mail.ru>  Sat, 26 Jan 2013 22:33:28 +0200
+ -- Boris Pek <tehnick-8@mail.ru>  Sat, 26 Jan 2013 22:41:37 +0200
 
-q4wine (1.0-0ppa1~raring1) raring; urgency=low
+q4wine (1.0-1) experimental; urgency=low
 
   * Update to stable release 1.0.
+  * Simplify debian/rules.
+  * Fix debian/compat.
+  * Add debian/lintian-overrides:
+    false positives for lintian tag hardening-no-fortify-functions.
 
- -- Boris Pek <tehnick-8@mail.ru>  Mon, 21 Jan 2013 21:53:51 +0200
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 21 Jan 2013 22:31:26 +0200
 
-q4wine (0.999-rc8-0ppa2~quantal1) quantal; urgency=low
+q4wine (0.999-rc8-2) experimental; urgency=low
 
   * Dependencies from wine* were moved from Depends to Recommends section.
     It should simplify migration to Multiarch packages. Also wine can be
     manually compiled and installed in user's system and not listed in the
     list of installed packages in this case. (Closes: #679466)
 
- -- Boris Pek <tehnick-8@mail.ru>  Fri, 29 Jun 2012 03:43:07 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Fri, 29 Jun 2012 02:48:56 +0300
 
-q4wine (0.999-rc8-0ppa1~quantal1) quantal; urgency=low
+q4wine (0.999-rc8-1) experimental; urgency=low
 
-  * Update to stable release 0.999-rc8.
+  * Update to release candidate 0.999-rc8.
+  * Deleted debian/patches/*: accepted in upstream.
+  * Updated debian/watch: changed regexp.
+  * Updated debian/control: used [kfreebsd-any] instead of hardcoded list of
+    kFreeBSD architectures [kfreebsd-i386 kfreebsd-amd64] in build dependency
+    from libkvm-dev.
 
- -- Boris Pek <tehnick-8@mail.ru>  Thu, 28 Jun 2012 23:00:24 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Thu, 28 Jun 2012 21:36:21 +0300
 
-q4wine (0.999-rc7-0ppa1~quantal1) quantal; urgency=low
+q4wine (0.999-rc7-3) experimental; urgency=low
+
+  * Added file debian/patches/fixes-for-hurd-i386:
+    fixes FTBFS in Debian GNU/Hurd.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Wed, 06 Jun 2012 21:55:24 +0300
+
+q4wine (0.999-rc7-2) experimental; urgency=low
+
+  * Added patch debian/patches/fix-build-on-kfreebsd-and-hurd-i386:
+    possibly fixes FTBFS in Debian GNU/kFreeBSD and GNU/Hurd.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 05 Jun 2012 22:07:11 +0300
+
+q4wine (0.999-rc7-1) experimental; urgency=low
 
   * Update to release candidate 0.999-rc7.
   * debian/patches/* were deleted: now available in upstream.
@@ -52,15 +85,16 @@ q4wine (0.999-rc7-0ppa1~quantal1) quantal; urgency=low
     - now uscan is used instead of direct using of wget and mv commands
     - used hardening flags in compiler options
 
- -- Boris Pek <tehnick-8@mail.ru>  Sun, 03 Jun 2012 23:54:39 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 04 Jun 2012 12:35:24 +0300
 
-q4wine (0.121-2ppa3~quantal1) quantal; urgency=low
+q4wine (0.121-4) unstable; urgency=low
 
-  * Some fixes in package.
+  * debian/patches/fix-for-gcc-4.7 was added:
+    (fixes FTBFS with GCC >= 4.7) (Closes: #672073)
 
- -- Boris Pek <tehnick-8@mail.ru>  Wed, 09 May 2012 00:36:07 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Wed, 09 May 2012 00:44:46 +0300
 
-q4wine (0.121-2ppa2~precise1) precise; urgency=low
+q4wine (0.121-3) unstable; urgency=low
 
   * Bumped Standards-Version to 3.9.3.
   * debian/control was updated:
@@ -80,14 +114,7 @@ q4wine (0.121-2ppa2~precise1) precise; urgency=low
     - now dh is used instead of direct dh_* commands.
       (fixes FTBFS with new build-arch handling) (Closes: #666371)
 
- -- Boris Pek <tehnick-8@mail.ru>  Mon, 09 Apr 2012 00:21:04 +0300
-
-q4wine (0.121-2ppa1~precise1) precise; urgency=low
-
-  * Package on Launchpad was sync with package in Debian.
-  * Changelog was cleaned.
-
- -- Boris Pek <tehnick-8@mail.ru>  Wed, 22 Jun 2011 22:55:14 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 09 Apr 2012 01:08:47 +0300
 
 q4wine (0.121-2) unstable; urgency=low
 
