@@ -1,3 +1,9 @@
+q4wine (1.1-r2-0ppa1~trusty1) trusty; urgency=medium
+
+  * Update to stable release 1.1-r2.
+
+ -- Boris Pek <tehnick@debian.org>  Tue, 17 Dec 2013 22:07:34 +0400
+
 q4wine (1.1-r1-1) unstable; urgency=low
 
   * Update to stable release 1.1-r1.
