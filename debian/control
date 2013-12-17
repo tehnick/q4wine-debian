@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 7.0.50~), cmake, autotools-dev, fakeroot,
 Homepage: http://q4wine.brezblock.org.ua/
 Vcs-Git: git://github.com/tehnick/q4wine-debian.git
 Vcs-Browser: https://github.com/tehnick/q4wine-debian
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 
 Package: q4wine
 Architecture: any
