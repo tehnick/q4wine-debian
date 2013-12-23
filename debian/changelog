@@ -1,8 +1,9 @@
-q4wine (1.1-r1-1~bpo70+1) wheezy-backports; urgency=medium
+q4wine (1.1-r2-1) unstable; urgency=medium
 
-  * Rebuild for wheezy-backports.
+  * Update to stable release 1.1-r2.
+  * Bump Standards-Version to 3.9.5 (was 3.9.5): no changes required.
 
- -- Boris Pek <tehnick@debian.org>  Sat, 14 Dec 2013 12:00:41 +0400
+ -- Boris Pek <tehnick@debian.org>  Tue, 17 Dec 2013 22:21:52 +0400
 
 q4wine (1.1-r1-1) unstable; urgency=low
 
