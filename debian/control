@@ -21,11 +21,11 @@ Package: q4wine
 Architecture: any
 Depends: icoutils,
          libqt4-sql-sqlite,
-         sudo,
-         wget,
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: wine [any-amd64 any-i386 any-powerpc] |
+Recommends: sudo,
+            wget,
+            wine [any-amd64 any-i386 any-powerpc] |
             wine-development [amd64 any-i386 any-powerpc] |
             wine1.2 [amd64 i386] |
             wine1.3 [amd64 i386] |
