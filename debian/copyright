@@ -8,12 +8,12 @@ Source: http://sourceforge.net/projects/q4wine/files/
  See section get-orig-source in debian/rules file for details.
 
 Files: *
-Copyright: 2008-2013 Alexey S. Malakhov (John Brezerk) <brezerk@gmail.com>
- 2009 Pavel Zinin (pashazz) <pzinin@gmail.com>
- 2008 Dmitry Marakasov (amdmi3) <amdmi3@amdmi3.ru>
- 2008 Sergey V. Dyatko <sergey.dyatko@gmail.com>
- 2005-2006 Dmitry Morozhnikov <dmiceman@mail.ru>
- 2013 Artem Vorotnikov <skybon@gmail.com>
+Copyright: 2008-2014 Alexey S. Malakhov (John Brezerk) <brezerk@gmail.com>
+           2009 Pavel Zinin (pashazz) <pzinin@gmail.com>
+           2008 Dmitry Marakasov (amdmi3) <amdmi3@amdmi3.ru>
+           2008 Sergey V. Dyatko <sergey.dyatko@gmail.com>
+           2005-2006 Dmitry Morozhnikov <dmiceman@mail.ru>
+           2013 Artem Vorotnikov <skybon@gmail.com>
 License: GPL-3+
  This program is free software: you can redistribute it and/or modify it under
  the terms of the GNU General Public License as published by the Free Software
@@ -93,7 +93,7 @@ License: LGPL-2.1
 
 Files: src/darwin/*
 Copyright: 1990-1993 The Regents of the University of California
- 2004 Garance Alistair Drosehn <gad@FreeBSD.org>
+           2004 Garance Alistair Drosehn <gad@FreeBSD.org>
 License: BSD-4-clause
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions
@@ -124,7 +124,7 @@ License: BSD-4-clause
  SUCH DAMAGE.
 
 Files: debian/*
-Copyright: 2010-2013 Boris Pek <tehnick-8@mail.ru>
+Copyright: 2010-2014 Boris Pek <tehnick-8@mail.ru>
 License: GPL-2+
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
