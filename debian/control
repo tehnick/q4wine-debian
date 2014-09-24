@@ -34,7 +34,10 @@ Recommends: wine-bin [any-i386 any-powerpc any-sparc] |
             wine1.2 [amd64 i386] |
             wine1.3 [amd64 i386] |
             wine1.4 [amd64 i386] |
-            wine1.5 [amd64 i386]
+            wine1.5 [amd64 i386] |
+            wine1.6 [amd64 i386] |
+            wine1.7 [amd64 i386],
+            winetricks
 Suggests: fuseiso [!hurd-i386 !kfreebsd-i386 !kfreebsd-amd64]
 Replaces: q4wine-unstable
 Conflicts: q4wine-unstable
