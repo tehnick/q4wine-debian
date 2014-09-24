@@ -3,7 +3,7 @@ Section: otherosfs
 Priority: optional
 Maintainer: Boris Pek <tehnick@debian.org>
 Build-Depends: cmake,
-               debhelper (>= 7.0.50~),
+               debhelper (>= 9),
                libfuse-dev [!hurd-i386],
                libkvm-dev [kfreebsd-any],
                libqt4-dev,
