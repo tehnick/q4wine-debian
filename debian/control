@@ -6,13 +6,12 @@ Build-Depends: autotools-dev,
                cmake,
                debhelper (>= 7.0.50~),
                fakeroot,
-               icoutils (>=0.26.0),
+               icoutils,
                libfuse-dev [!hurd-i386],
-               libfuse2 [!hurd-i386],
                libkvm-dev [kfreebsd-any],
-               libqt4-dev (>=4.4.0),
-               qt4-dev-tools (>=4.4.0),
-               qt4-qtconfig (>=4.4.0)
+               libqt4-dev,
+               qt4-dev-tools,
+               qt4-qtconfig
 Homepage: https://web.archive.org/web/20131204020055/http://q4wine.brezblock.org.ua/
 Vcs-Git: git://github.com/tehnick/q4wine-debian.git
 Vcs-Browser: https://github.com/tehnick/q4wine-debian
@@ -20,17 +19,14 @@ Standards-Version: 3.9.6
 
 Package: q4wine
 Architecture: any
-Depends: icoutils (>=0.26.0),
+Depends: icoutils,
          libqt4-sql-sqlite,
          sudo,
          wget,
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: wine-bin [any-i386 any-powerpc any-sparc] |
-            wine-bin-unstable [any-i386 any-powerpc any-sparc] |
-            wine64-bin [any-amd64] |
-            wine64-bin-unstable [any-amd64] |
-            wine [amd64 i386] |
+Recommends: wine [any-amd64 any-i386 any-powerpc] |
+            wine-development [amd64 any-i386 any-powerpc] |
             wine1.2 [amd64 i386] |
             wine1.3 [amd64 i386] |
             wine1.4 [amd64 i386] |
