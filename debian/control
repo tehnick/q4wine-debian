@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Boris Pek <tehnick@debian.org>
 Build-Depends: cmake,
                debhelper (>= 9),
+               icoutils,
                libfuse-dev [!hurd-i386],
                libkvm-dev [kfreebsd-any],
                libqt4-dev,

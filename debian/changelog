@@ -1,3 +1,9 @@
+q4wine (1.1-r2-3) unstable; urgency=medium
+
+  * Add icoutils back to Build-Depends.
+
+ -- Boris Pek <tehnick@debian.org>  Thu, 25 Sep 2014 02:00:53 +0400
+
 q4wine (1.1-r2-2) unstable; urgency=medium
 
   * Bump debhelper version to 9 (was 7.0.50~); update debian/compat.
