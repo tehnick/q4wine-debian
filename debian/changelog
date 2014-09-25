@@ -1,3 +1,10 @@
+q4wine (1.1-r2-3ppa1~utopic1) utopic; urgency=medium
+
+  * Package on Launchpad was sync with package in Debian.
+  * Changelog was cleaned.
+
+ -- Boris Pek <tehnick@debian.org>  Thu, 25 Sep 2014 08:41:02 +0400
+
 q4wine (1.1-r2-3) unstable; urgency=medium
 
   * Add icoutils back to Build-Depends.
