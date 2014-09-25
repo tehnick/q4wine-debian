@@ -23,7 +23,7 @@ q4wine (1.1-r2-2) unstable; urgency=medium
   * Add fix-documentation-url.patch:
     Use web.archive.org until project website will be repaired. Also disable
     automatic opening this documentation after initial program configuring.
-    (Closes: #679466) (LP: #1332725)
+    (Closes: #761968) (LP: #1332725)
 
  -- Boris Pek <tehnick@debian.org>  Wed, 24 Sep 2014 23:26:53 +0400
 
