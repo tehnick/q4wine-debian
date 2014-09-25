@@ -7,10 +7,8 @@ USCAN_REPORT = $(shell uscan --noconf --report --dehs $(DEBIAN_PATH))
 CUR_VER = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')
 CUR_URL = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-url>\(.*\)<\/upstream-url>.*/\1/p')
 
-CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
-CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(CPPFLAGS)
-LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
-export CPPFLAGS CXXFLAGS LDFLAGS
+export DEB_CXXFLAGS_MAINT_APPEND = $(shell dpkg-buildflags --get CPPFLAGS)
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release \
             -DLIBS_ENTRY_PATH=/usr/lib/q4wine/ \
@@ -23,10 +21,7 @@ CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release \
 override_dh_auto_configure:
 	dh_auto_configure -- $(CMAKEOPTS)
 
-override_dh_installchangelogs:
-	dh_installchangelogs ChangeLog
-
 get-orig-source:
-	wget -c4 "$(CUR_URL)" -O "$(PACKAGE)_$(CUR_VER).orig.tar.bz2"
+	wget -c "$(CUR_URL)" -O "$(PACKAGE)_$(CUR_VER).orig.tar.bz2"
 
 .PHONY: override_dh_makeshlibs
