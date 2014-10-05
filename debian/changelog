@@ -1,3 +1,9 @@
+q4wine (1.1-r2-3~bpo70+1) wheezy-backports; urgency=medium
+
+  * Rebuild for wheezy-backports.
+
+ -- Boris Pek <tehnick@debian.org>  Sun, 05 Oct 2014 14:11:18 +0400
+
 q4wine (1.1-r2-3) unstable; urgency=medium
 
   * Add icoutils back to Build-Depends.
