@@ -1,13 +1,36 @@
-q4wine (1.1-r2-1~bpo70+1) wheezy-backports; urgency=medium
+q4wine (1.1-r2-3) unstable; urgency=medium
 
-  * Rebuild for wheezy-backports.
+  * Add icoutils back to Build-Depends.
 
- -- Boris Pek <tehnick@debian.org>  Mon, 23 Dec 2013 23:09:47 +0400
+ -- Boris Pek <tehnick@debian.org>  Thu, 25 Sep 2014 02:00:53 +0400
+
+q4wine (1.1-r2-2) unstable; urgency=medium
+
+  * Bump debhelper version to 9 (was 7.0.50~); update debian/compat.
+  * Bump Standards-Version to 3.9.6 (was 3.9.5): no changes required.
+  * Update debian/control:
+    - update Homepage field
+    - update using wrap-and-sort tool
+    - simplify Build-Depends and Depends
+    - delete wine-bin, wine64-bin, wine-bin-unstable and wine64-bin-unstable
+      from Recommends
+    - add wine, wine-development, wine1.6, wine1.7 and winetricks
+      to Recommends
+    - move sudo and wget from Depends to Recommends
+  * Simplify debian/rules.
+  * Delete useless debian/docs.
+  * Update years in debian/control.
+  * Add fix-documentation-url.patch:
+    Use web.archive.org until project website will be repaired. Also disable
+    automatic opening this documentation after initial program configuring.
+    (Closes: #761968) (LP: #1332725)
+
+ -- Boris Pek <tehnick@debian.org>  Wed, 24 Sep 2014 23:26:53 +0400
 
 q4wine (1.1-r2-1) unstable; urgency=medium
 
   * Update to stable release 1.1-r2.
-  * Bump Standards-Version to 3.9.5 (was 3.9.5): no changes required.
+  * Bump Standards-Version to 3.9.5 (was 3.9.4): no changes required.
 
  -- Boris Pek <tehnick@debian.org>  Tue, 17 Dec 2013 22:21:52 +0400
 
