@@ -32,7 +32,7 @@ Recommends: sudo,
             wine1.7 [amd64 i386],
             winetricks
 Suggests: fuseiso [!hurd-i386 !kfreebsd-i386 !kfreebsd-amd64]
-Description: Qt4 GUI for wine (WINE)
+Description: Qt GUI for wine (WINE)
  Q4Wine will help you manage wine prefixes and installed applications.
  .
  General features:
