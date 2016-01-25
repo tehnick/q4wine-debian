@@ -1,9 +1,23 @@
-q4wine (1.1-r2-3ppa1~utopic1) utopic; urgency=medium
+q4wine (1.2-r2-1) unstable; urgency=medium
 
-  * Package on Launchpad was sync with package in Debian.
-  * Changelog was cleaned.
+  * New upstream release.
+  * Update debian/control:
+    - remove outdated Replaces
+    - change build dependencies from Qt4 to Qt5
+    - update Depends of binary package
+      (libqt4-sql-sqlite --> libqt5sql5-sqlite)
+    - update Recommends of binary package
+      (new Wine architectures, wine1.9, etc.)
+    - update short description of binary package
+    - fix lintian note vcs-field-uses-insecure-uri vcs-git
+  * Update debian/rules:
+    - disable Wine AppDB browser support
+    - enable build with Qt5
+  * Update fix-documentation-url.patch:
+    partially fixed in upstream.
+  * Update debian/copyright.
 
- -- Boris Pek <tehnick@debian.org>  Thu, 25 Sep 2014 08:41:02 +0400
+ -- Boris Pek <tehnick@debian.org>  Mon, 25 Jan 2016 04:11:20 +0300
 
 q4wine (1.1-r2-3) unstable; urgency=medium
 
