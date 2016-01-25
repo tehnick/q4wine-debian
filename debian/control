@@ -1,4 +1,4 @@
-Source: q4wine
+Source: q4wine-qt4
 Section: otherosfs
 Priority: optional
 Maintainer: Boris Pek <tehnick@debian.org>
