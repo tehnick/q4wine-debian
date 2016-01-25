@@ -1,3 +1,9 @@
+q4wine-qt4 (1.2-r2-1ppa1~wily1) wily; urgency=medium
+
+  * Backport to Ubuntu Wily.
+
+ -- Boris Pek <tehnick@debian.org>  Tue, 26 Jan 2016 01:26:27 +0300
+
 q4wine (1.2-r2-1ppa2~xenial1) xenial; urgency=medium
 
   * Some fixes in package.
