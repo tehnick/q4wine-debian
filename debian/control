@@ -10,7 +10,7 @@ Build-Depends: cmake,
                qtbase5-dev,
                qttools5-dev-tools
 Homepage: https://web.archive.org/web/20131204020055/http://q4wine.brezblock.org.ua/
-Vcs-Git: git://github.com/tehnick/q4wine-debian.git
+Vcs-Git: https://github.com/tehnick/q4wine-debian.git
 Vcs-Browser: https://github.com/tehnick/q4wine-debian
 Standards-Version: 3.9.6
 
