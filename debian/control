@@ -7,8 +7,8 @@ Build-Depends: cmake,
                icoutils,
                libfuse-dev [!hurd-i386],
                libkvm-dev [kfreebsd-any],
-               libqt4-dev,
-               qt4-dev-tools
+               qtbase5-dev,
+               qttools5-dev-tools
 Homepage: https://web.archive.org/web/20131204020055/http://q4wine.brezblock.org.ua/
 Vcs-Git: git://github.com/tehnick/q4wine-debian.git
 Vcs-Browser: https://github.com/tehnick/q4wine-debian
@@ -17,7 +17,7 @@ Standards-Version: 3.9.6
 Package: q4wine
 Architecture: any
 Depends: icoutils,
-         libqt4-sql-sqlite,
+         libqt5sql5-sqlite,
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: sudo,
