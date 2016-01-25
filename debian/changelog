@@ -1,3 +1,9 @@
+q4wine (1.2-r2-1ppa1~xenial1) xenial; urgency=medium
+
+  * Rebuild for Launchpad.
+
+ -- Boris Pek <tehnick@debian.org>  Tue, 26 Jan 2016 00:13:41 +0300
+
 q4wine (1.2-r2-1) unstable; urgency=medium
 
   * New upstream release.
