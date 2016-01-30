@@ -7,34 +7,29 @@ Build-Depends: cmake,
                icoutils,
                libfuse-dev [!hurd-i386],
                libkvm-dev [kfreebsd-any],
-               libqt4-dev,
-               qt4-dev-tools
+               qtbase5-dev,
+               qttools5-dev-tools
 Homepage: https://web.archive.org/web/20131204020055/http://q4wine.brezblock.org.ua/
-Vcs-Git: git://github.com/tehnick/q4wine-debian.git
+Vcs-Git: https://github.com/tehnick/q4wine-debian.git
 Vcs-Browser: https://github.com/tehnick/q4wine-debian
 Standards-Version: 3.9.6
 
 Package: q4wine
 Architecture: any
 Depends: icoutils,
-         libqt4-sql-sqlite,
+         libqt5sql5-sqlite,
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: sudo,
             wget,
-            wine [any-amd64 any-i386 any-powerpc] |
-            wine-development [amd64 any-i386 any-powerpc] |
-            wine1.2 [amd64 i386] |
-            wine1.3 [amd64 i386] |
-            wine1.4 [amd64 i386] |
-            wine1.5 [amd64 i386] |
+            wine [any-amd64 any-i386 arm64 armel armhf powerpc] |
+            wine-development [amd64 any-i386 arm64 armel armhf powerpc] |
             wine1.6 [amd64 i386] |
-            wine1.7 [amd64 i386],
+            wine1.8 [amd64 i386] |
+            wine1.9 [amd64 i386],
             winetricks
 Suggests: fuseiso [!hurd-i386 !kfreebsd-i386 !kfreebsd-amd64]
-Replaces: q4wine-unstable
-Conflicts: q4wine-unstable
-Description: Qt4 GUI for wine (WINE)
+Description: Qt GUI for wine (WINE)
  Q4Wine will help you manage wine prefixes and installed applications.
  .
  General features:

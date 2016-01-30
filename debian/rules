@@ -13,7 +13,9 @@ export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release \
             -DLIBS_ENTRY_PATH=/usr/lib/q4wine/ \
             -DCMAKE_INSTALL_PREFIX=/usr \
-            -USE_GZIP=ON
+            -DQT5=ON \
+            -DUSE_GZIP=ON \
+            -DWITH_WINEAPPDB=OFF
 
 %:
 	dh $@ --parallel
