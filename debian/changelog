@@ -1,3 +1,10 @@
+q4wine (1.2-r2-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+  * Build with Qt4 instead of Qt5.
+
+ -- Boris Pek <tehnick@debian.org>  Sat, 30 Jan 2016 20:55:46 +0300
+
 q4wine (1.2-r2-1) unstable; urgency=medium
 
   * New upstream release.
