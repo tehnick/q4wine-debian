@@ -14,7 +14,6 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release \
             -DLIBS_ENTRY_PATH=/usr/lib/q4wine/ \
             -DCMAKE_INSTALL_PREFIX=/usr \
-            -DQT5=ON \
             -DUSE_GZIP=ON \
             -DWITH_WINEAPPDB=OFF
 
