@@ -1,8 +1,37 @@
-q4wine (1.1-r2-3~bpo70+1) wheezy-backports; urgency=medium
+q4wine (1.3-1) unstable; urgency=medium
 
-  * Rebuild for wheezy-backports.
+  * New upstream release. Fixed in upstream:
+    library paths were removed from settings dialog
+    (Closes: #815018)
+  * Move winetricks from Recommends to Suggests of q4wine package.
+    (Closes: #820185)
+  * Bump Standards-Version to 3.9.7 (was 3.9.6): no changes required.
+  * Enable all hardening flags in debian/rules.
+  * Update fix-documentation-url.patch.
+  * Update debian/copyright.
 
- -- Boris Pek <tehnick@debian.org>  Sun, 05 Oct 2014 14:11:18 +0400
+ -- Boris Pek <tehnick@debian.org>  Thu, 07 Apr 2016 00:39:33 +0300
+
+q4wine (1.2-r2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update debian/control:
+    - remove outdated Replaces
+    - change build dependencies from Qt4 to Qt5
+    - update Depends of binary package
+      (libqt4-sql-sqlite --> libqt5sql5-sqlite)
+    - update Recommends of binary package
+      (new Wine architectures, wine1.9, etc.)
+    - update short description of binary package
+    - fix lintian note vcs-field-uses-insecure-uri vcs-git
+  * Update debian/rules:
+    - disable Wine AppDB browser support
+    - enable build with Qt5
+  * Update fix-documentation-url.patch:
+    partially fixed in upstream.
+  * Update debian/copyright.
+
+ -- Boris Pek <tehnick@debian.org>  Mon, 25 Jan 2016 04:11:20 +0300
 
 q4wine (1.1-r2-3) unstable; urgency=medium
 
