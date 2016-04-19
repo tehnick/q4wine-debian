@@ -3,7 +3,7 @@ q4wine (1.3-1~bpo7+1) wheezy-backports-sloppy; urgency=medium
   * Rebuild for wheezy-backports-sloppy.
   * Build with Qt4 instead of Qt5.
 
- -- Boris Pek <tehnick@debian.org>  Tue, 19 Apr 2016 00:35:06 +0300
+ -- Boris Pek <tehnick@debian.org>  Tue, 19 Apr 2016 11:46:31 +0300
 
 q4wine (1.3-1) unstable; urgency=medium
 
