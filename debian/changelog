@@ -1,9 +1,9 @@
-q4wine (1.3-1~bpo8+1) jessie-backports; urgency=medium
+q4wine (1.3.1-1) unstable; urgency=medium
 
-  * Rebuild for jessie-backports.
-  * Build with Qt4 instead of Qt5.
+  * New upstream release.
+  * Bump Standards-Version to 3.9.8 (was 3.9.7): no changes required.
 
- -- Boris Pek <tehnick@debian.org>  Mon, 18 Apr 2016 23:44:00 +0300
+ -- Boris Pek <tehnick@debian.org>  Mon, 25 Jul 2016 02:12:32 +0300
 
 q4wine (1.3-1) unstable; urgency=medium
 
