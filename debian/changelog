@@ -1,14 +1,15 @@
-q4wine (1.3.5-0ppa1~zesty1) zesty; urgency=medium
+q4wine (1.3.5-1) unstable; urgency=medium
 
-  * New stable release.
+  * New upstream release. (Closes: #861619)
+  * Bump Standards-Version to 4.0.0 (was 3.9.8): no changes required.
+  * Add wine2.0 to Recommends of q4wine package.
+  * Update debian/rules:
+    - simplify CMAKEOPTS
+    - delete .PHONY: override_dh_makeshlibs
+  * Update debian/copyright.
+  * Add debian/clean.
 
- -- Boris Pek <tehnick@debian.org>  Wed, 03 May 2017 01:26:07 +0300
-
-q4wine (1.3.4-0ppa1~zesty1) zesty; urgency=medium
-
-  * New stable release.
-
- -- Boris Pek <tehnick@debian.org>  Thu, 26 Jan 2017 01:20:04 +0300
+ -- Boris Pek <tehnick@debian.org>  Fri, 04 Aug 2017 00:02:54 +0300
 
 q4wine (1.3.3-1) unstable; urgency=medium
 

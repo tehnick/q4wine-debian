@@ -11,9 +11,7 @@ export DEB_CXXFLAGS_MAINT_APPEND = $(shell dpkg-buildflags --get CPPFLAGS)
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
-CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release \
-            -DLIBS_ENTRY_PATH=/usr/lib/q4wine/ \
-            -DCMAKE_INSTALL_PREFIX=/usr \
+CMAKEOPTS = -DLIBS_ENTRY_PATH=/usr/lib/q4wine/ \
             -DQT5=ON \
             -DUSE_GZIP=ON \
             -DWITH_WINEAPPDB=OFF
@@ -27,4 +25,3 @@ override_dh_auto_configure:
 get-orig-source:
 	wget -c "$(CUR_URL)" -O "$(PACKAGE)_$(CUR_VER).orig.tar.bz2"
 
-.PHONY: override_dh_makeshlibs
