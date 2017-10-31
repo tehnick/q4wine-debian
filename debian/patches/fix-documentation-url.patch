@@ -1,7 +1,7 @@
 Description: Fix documentation URL
  Use web.archive.org until project website will be available from around the globe.
 Author: Boris Pek <tehnick-8@yandex.ru>
-Last-Update: 2016-10-25
+Last-Update: 2017-10-26
 Forwarded: not-needed
 Bug: https://github.com/brezerk/q4wine/issues/45
 Bug-Debian: http://bugs.debian.org/761968, https://bugs.debian.org/836429
@@ -30,12 +30,12 @@ Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/q4wine/+bug/1332725
  #define APPDB_PORT 80
 --- a/src/q4wine-lib/q4wine-lib.cpp
 +++ b/src/q4wine-lib/q4wine-lib.cpp
-@@ -1584,7 +1584,7 @@
+@@ -1509,7 +1509,7 @@
              }
              url.append(APP_WEBSITE);
              url.append("/documentation/");
 -            url.append(lang);
 +            url.append("en_us");
              url.append("/");
-             url.append(rawurl);
- 
+             if (rawurl.contains('#')) {
+                 QStringList list = rawurl.split('#');
