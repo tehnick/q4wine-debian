@@ -1,3 +1,12 @@
+q4wine (1.3.6-2) unstable; urgency=medium
+
+  * Add build dependency from qttools5-dev because Qt5LinguistTools*.cmake
+    scripts have been moved from qttools5-dev-tools to qttools5-dev.
+    (Closes: #881085)
+  * Update some links from HTTP to HTTPS in debian/copyright.
+
+ -- Boris Pek <tehnick@debian.org>  Wed, 15 Nov 2017 00:59:33 +0300
+
 q4wine (1.3.6-1) unstable; urgency=medium
 
   * New upstream release.
