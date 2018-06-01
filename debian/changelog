@@ -99,7 +99,7 @@ q4wine (1.1-r2-2) unstable; urgency=medium
     - move sudo and wget from Depends to Recommends
   * Simplify debian/rules.
   * Delete useless debian/docs.
-  * Update years in debian/control.
+  * Update years in debian/copyright.
   * Add fix-documentation-url.patch:
     Use web.archive.org until project website will be repaired. Also disable
     automatic opening this documentation after initial program configuring.
