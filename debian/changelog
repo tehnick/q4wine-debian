@@ -1,21 +1,22 @@
-q4wine (1.3.10-0ppa1~cosmic1) cosmic; urgency=medium
+q4wine (1.3.10-1) unstable; urgency=medium
 
-  * New stable release.
+  * New upstream release.
+  * Update short description of binary package.
+  * Bump Standards-Version to 4.2.1 (was 4.1.4).
+  * Bump debhelper version to 11~ (was 9); update debian/compat.
+  * Simplify debian/rules:
+    - delete --parallel option from dh
+    - delete get-orig-source section and all related variables
 
- -- Boris Pek <tehnick@debian.org>  Wed, 12 Sep 2018 23:37:35 +0300
+ -- Boris Pek <tehnick@debian.org>  Thu, 13 Sep 2018 00:51:23 +0300
 
-q4wine (1.3.7-0ppa2~cosmic1) cosmic; urgency=medium
+q4wine (1.3.7-1) unstable; urgency=medium
 
   * Bump Standards-Version to 4.1.4 (was 4.1.1): no changes required.
   * Add build dependency from libqt5svg5-dev.
+  * Update years in debian/copyright.
 
- -- Boris Pek <tehnick@debian.org>  Wed, 30 May 2018 02:14:23 +0300
-
-q4wine (1.3.7-0ppa1~bionic1) bionic; urgency=medium
-
-  * New stable release.
-
- -- Boris Pek <tehnick@debian.org>  Sat, 05 May 2018 12:26:53 +0300
+ -- Boris Pek <tehnick@debian.org>  Sat, 02 Jun 2018 00:59:26 +0300
 
 q4wine (1.3.6-2) unstable; urgency=medium
 
@@ -118,7 +119,7 @@ q4wine (1.1-r2-2) unstable; urgency=medium
     - move sudo and wget from Depends to Recommends
   * Simplify debian/rules.
   * Delete useless debian/docs.
-  * Update years in debian/control.
+  * Update years in debian/copyright.
   * Add fix-documentation-url.patch:
     Use web.archive.org until project website will be repaired. Also disable
     automatic opening this documentation after initial program configuring.
