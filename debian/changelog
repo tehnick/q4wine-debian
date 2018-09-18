@@ -1,8 +1,14 @@
-q4wine (1.3.7-1~bpo9+1) stretch-backports; urgency=medium
+q4wine (1.3.10-1) unstable; urgency=medium
 
-  * Rebuild for stretch-backports.
+  * New upstream release.
+  * Update short description of binary package.
+  * Bump Standards-Version to 4.2.1 (was 4.1.4).
+  * Bump debhelper version to 11~ (was 9); update debian/compat.
+  * Simplify debian/rules:
+    - delete --parallel option from dh
+    - delete get-orig-source section and all related variables
 
- -- Boris Pek <tehnick@debian.org>  Sat, 09 Jun 2018 17:02:36 +0300
+ -- Boris Pek <tehnick@debian.org>  Thu, 13 Sep 2018 00:51:23 +0300
 
 q4wine (1.3.7-1) unstable; urgency=medium
 
