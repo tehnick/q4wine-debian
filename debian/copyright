@@ -5,7 +5,6 @@ Upstream-Name: Q4Wine
 Upstream-Contact: Oleksii S. Malakhov aka John Brezerk <brezerk@gmail.com>
 Source: https://sourceforge.net/projects/q4wine/files/
  The orig.tar.bz2 is just renamed upstream tarball (without changes).
- See section get-orig-source in debian/rules file for details.
 
 Files: *
 Copyright: 2008-2019 Oleksii S. Malakhov aka John Brezerk <brezerk@gmail.com>
