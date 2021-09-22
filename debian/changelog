@@ -1,15 +1,20 @@
-q4wine (1.3.12-0ppa1~focal1) focal; urgency=medium
+q4wine (1.3.12-1) unstable; urgency=medium
 
-  * New stable release.
+  * New upstream release.
+  * Update patch 01_fix-documentation-url.
+  * Update debian/control:
+    - bump Standards-Version to 4.5.1 (was 4.3.0): no changes required
+    - replace build dependency from debhelper (>= 12~) to
+      debhelper-compat (= 13)
+    - add Rules-Requires-Root: no
+  * Delete debian/compat.
+  * Simplify debian/rules:
+    remove DEB_LDFLAGS_MAINT_APPEND variable with -Wl,--as-needed flag
+  * Update debian/watch.
+  * Update debian/lintian-overrides.
+  * Update years in debian/copyright.
 
- -- Boris Pek <tehnick@debian.org>  Tue, 11 Feb 2020 00:22:41 +0300
-
-q4wine (1.3.11-1ppa1~focal1) focal; urgency=medium
-
-  * Sync package on Launchpad with package in Debian.
-  * Clean changelog.
-
- -- Boris Pek <tehnick@debian.org>  Fri, 17 Jan 2020 02:23:24 +0300
+ -- Boris Pek <tehnick@debian.org>  Fri, 08 Jan 2021 03:48:50 +0300
 
 q4wine (1.3.11-1) unstable; urgency=medium
 
